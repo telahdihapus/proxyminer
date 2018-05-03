@@ -1,11 +1,11 @@
-from lib import *
-import shlex
-import subprocess
 try:
+	from lib import *
 	from bs4 import BeautifulSoup
-except ValueError:
+except ImportError or ValueError:
 	print('gunakan python3 ya gan, masih ada issue kalo pake python dibawah 3 \nhttps://stackoverflow.com/questions/27327901/python-valueerror-chr-arg-not-in-range256')
 	exit()
+import shlex
+import subprocess
 import requests
 from termcolor import colored
 import sys
